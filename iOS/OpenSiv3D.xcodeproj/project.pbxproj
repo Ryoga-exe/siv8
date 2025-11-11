@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295A5F4C2EC3AA64006DEB58 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295A5F4B2EC3AA64006DEB58 /* Metal.framework */; };
+		295A5F4E2EC3AA6A006DEB58 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295A5F4D2EC3AA6A006DEB58 /* QuartzCore.framework */; };
+		295A5F4F2EC3AA6F006DEB58 /* libSiv3D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 297E45902EC2621400B5A35E /* libSiv3D.a */; };
 		297E45812EC2591600B5A35E /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 297E457C2EC2591600B5A35E /* Main.cpp */; };
 		297E45832EC2591600B5A35E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297E457B2EC2591600B5A35E /* Assets.xcassets */; };
 		297E543C2EC2623900B5A35E /* SkClipStackDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 297E4F5D2EC2623900B5A35E /* SkClipStackDevice.cpp */; };
@@ -1044,6 +1047,16 @@
 		297E58872EC2623900B5A35E /* SivMemoryMappedFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 297E49E02EC2623900B5A35E /* SivMemoryMappedFile.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		295A5F502EC3AA6F006DEB58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 297E321B2EC251D700B5A35E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 297E458F2EC2621400B5A35E;
+			remoteInfo = Siv3D;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		297E458E2EC2621400B5A35E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -1057,6 +1070,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		295A5F4B2EC3AA64006DEB58 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		295A5F4D2EC3AA6A006DEB58 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		297E323B2EC254EB00B5A35E /* Siv3D-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Siv3D-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		297E457B2EC2591600B5A35E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		297E457C2EC2591600B5A35E /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
@@ -3954,6 +3969,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				295A5F4F2EC3AA6F006DEB58 /* libSiv3D.a in Frameworks */,
+				295A5F4E2EC3AA6A006DEB58 /* QuartzCore.framework in Frameworks */,
+				295A5F4C2EC3AA64006DEB58 /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3967,13 +3985,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		295A5F4A2EC3AA64006DEB58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				295A5F4D2EC3AA6A006DEB58 /* QuartzCore.framework */,
+				295A5F4B2EC3AA64006DEB58 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		297E321A2EC251D700B5A35E = {
 			isa = PBXGroup;
 			children = (
 				297E543B2EC2623900B5A35E /* Siv3D */,
 				297E457E2EC2591600B5A35E /* iOS */,
 				297E32242EC251D700B5A35E /* Products */,
-				297E458B2EC25A7E00B5A35E /* tmp */,
+				295A5F4A2EC3AA64006DEB58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3994,13 +4021,6 @@
 			);
 			name = iOS;
 			sourceTree = SOURCE_ROOT;
-		};
-		297E458B2EC25A7E00B5A35E /* tmp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tmp;
-			sourceTree = "<group>";
 		};
 		297E46512EC2623900B5A35E /* detail */ = {
 			isa = PBXGroup;
@@ -10126,6 +10146,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				295A5F512EC3AA6F006DEB58 /* PBXTargetDependency */,
 			);
 			name = "Siv3D-Test";
 			packageProductDependencies = (
@@ -11252,6 +11273,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		295A5F512EC3AA6F006DEB58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 297E458F2EC2621400B5A35E /* Siv3D */;
+			targetProxy = 295A5F502EC3AA6F006DEB58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		297E322B2EC251D700B5A35E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -11455,23 +11484,56 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_COMMA = NO;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../Siv3D/lib/macOS/siv3d";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_UNICODE,
+					ZSTD_MULTITHREAD,
+					SK_RELEASE,
+					SK_ENABLE_OPTIMIZE_SIZE,
+					SK_DISABLE_TRACING,
+					SK_DISABLE_EFFECT_DESERIALIZATION,
+				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					../Siv3D/include,
+					../Siv3D/include/ThirdParty,
+					../Siv3D/src,
+					"../Siv3D/src/Siv3D-Platform/iOS",
+					../Siv3D/src/ThirdParty,
+					../Siv3D/src/ThirdParty/skia,
+					"../Siv3D/src/ThirdParty-prebuilt",
+					"../Siv3D/src/ThirdParty-prebuilt/freetype",
+					../Dependencies/boost_1_83_0,
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = NO;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fvisibility-inlines-hidden",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+				);
 			};
 			name = Debug;
 		};
@@ -11484,21 +11546,52 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_COMMA = NO;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../Siv3D/lib/macOS/siv3d";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_UNICODE,
+					ZSTD_MULTITHREAD,
+					SK_RELEASE,
+					SK_ENABLE_OPTIMIZE_SIZE,
+					SK_DISABLE_TRACING,
+					SK_DISABLE_EFFECT_DESERIALIZATION,
+				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					../Siv3D/include,
+					../Siv3D/include/ThirdParty,
+					../Siv3D/src,
+					"../Siv3D/src/Siv3D-Platform/iOS",
+					../Siv3D/src/ThirdParty,
+					../Siv3D/src/ThirdParty/skia,
+					"../Siv3D/src/ThirdParty-prebuilt",
+					"../Siv3D/src/ThirdParty-prebuilt/freetype",
+					../Dependencies/boost_1_83_0,
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = NO;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fvisibility-inlines-hidden",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+				);
 			};
 			name = Release;
 		};
